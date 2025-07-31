@@ -8,4 +8,11 @@ function checkCredentals(username, password) {  // опечатка в назв�
 
 console.log('Debug: auth module loaded');  // отладочный код
 
+function login(username, password) {
+    if (checkCredentals(username, password)) {
+        return { success: true, token: 'abc123' };
+    }
+    return { success: false };
+}
+
 module.exports = { login };
